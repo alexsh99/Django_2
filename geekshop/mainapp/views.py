@@ -45,7 +45,6 @@ def products(request, index=None, page=1):
         'categories': categories,
         'category': category,
         'products': paginator_page,
-        'basket_items': get_basket(request.user),
     }
     return render(request, 'products_list.html', context=context)
 
@@ -56,7 +55,6 @@ def product(request, pk):
     context = {
         'product': product,
         'categories': ProductCategory.objects.all(),
-        'basket_items': get_basket(request.user),
         'related': get_related(product),
         'hot': get_hot_product()
     }
