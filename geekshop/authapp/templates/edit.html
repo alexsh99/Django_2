@@ -11,6 +11,7 @@
             <form action="{% url 'authapp:edit' %}" method="post" enctype="multipart/form-data">
                 {% csrf_token %}
                 {{ edit_form }}
+                {{ profile_form }}
                 <input type="submit" class="form-control" value="Сохранить">
             </form>
             <button class="btn btn-round form-control last">
