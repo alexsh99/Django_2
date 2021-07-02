@@ -15,23 +15,14 @@
           integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'fonts/font-awesome/css/font-awesome.css' %}">
-    {% block js_head %}
-    {% endblock %}
-    {% block css %}
+    {% block js %}
+        
     {% endblock %}
 </head>
 <body>
-<div class="cont p-0">
-    {% block content %}
-    {% endblock %}
-    <div class="clr"></div>
-</div>
-
-{% block footer %}
-{% include 'footer.html' %}
-{% endblock %}
-
-{% block js %}
-{% endblock %}
+    <div class="cont p-0">
+        {% block content %}
+        {% endblock %}
+    </div>
 </body>
 </html>

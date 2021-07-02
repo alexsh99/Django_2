@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'basketapp',
     'adminapp',
     'social_django',
+    'ordersapp'
 ]
 
 AUTH_USER_MODEL = 'authapp.ShopUser'
