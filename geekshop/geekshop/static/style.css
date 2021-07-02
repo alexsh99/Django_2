@@ -55,7 +55,7 @@ html, body {
 	text-decoration: none;
 	padding: 10px 13px;
 }
-.menu .active {
+.menu .active_menu {
 	color: #212121;
 	font-weight: 700;
 	border-bottom: 3px solid #212121;
