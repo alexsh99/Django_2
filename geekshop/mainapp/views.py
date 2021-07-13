@@ -1,5 +1,6 @@
 import random
 from django.contrib.auth.decorators import login_required
+from django.http import JsonResponse
 from django.shortcuts import render, get_object_or_404
 from basketapp.models import Basket
 from .models import ProductCategory
@@ -58,4 +59,6 @@ def product(request, pk):
         'related': get_related(product),
         'hot': get_hot_product()
     }
+    if request.is_ajax():
+        return JsonResponse({'price': product.price})
     return render(request, 'products.html', context=context)
